@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 export function Product({data}) {
 
@@ -11,7 +12,7 @@ export function Product({data}) {
             <img src={data.pic} className="card-img-top" />
             <h5 className="card-title">{data.title}</h5>
             <p style={{fontSize:22, fontWeight:700}}className="text-success">{data.price}</p>
-            <a className="btn btn-primary" href="#">Show more</a>
+            <Link to="./detail" > <span className="btn btn-primary">Show more</span> </Link>
         </div>
     </div>
 }
